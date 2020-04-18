@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hr.repositories.EmployeeMapper">
+
+	<resultMap id="empResultMap" type="com.hr.model.Employee">
+		<result property="id" column="employee_id" />
+		<result property="firstName" column="first_name" />
+		<result property="lastName" column="last_name" />
+		<result property="salary" column="salary" />
+		
+	</resultMap>
+
+	<select id="getAllEmps" resultMap="empResultMap">
+		SELECT
+		employee_id,
+		first_name,
+		last_name,
+		email,
+		phone_number,
+		hire_date,
+		job_id,
+		salary,
+		commission_pct,
+		manager_id,
+		department_id
+		FROM
+		employees
+	</select>
+
+	
+	<select id="getDepartment" resultMap="deptResultMap">
+	select department_id  , department_Name  from departments
+	where department_id = #{id}
+	</select>
+	
+	<resultMap id="deptResultMap" type="com.hr.model.Department">
+	<result property="id"  column="department_id"/>
+	<result property="departmentName"  column="department_Name"/>	
+	</resultMap>
+
+
+</mapper>
