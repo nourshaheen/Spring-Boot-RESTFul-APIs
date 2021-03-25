@@ -60,6 +60,12 @@
 		<artifactId>jjwt</artifactId>
 		<version>0.7.0</version>
 	</dependency>
+	
+	<dependency>
+	<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+	</dependency>
+	
 	</dependencies>
 
 	<build>

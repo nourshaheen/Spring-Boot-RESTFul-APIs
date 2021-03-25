@@ -39,8 +39,8 @@ public class FirstTimeRunner implements CommandLineRunner {
 		productService.save(new Product(2L, "product 2", 2200.2));
 		log.info("Product saved successfully");
 		
-		orderService.save(new Order(1L, "Order 1" , new Date(), 10L));
-		orderService.save(new Order(2L, "Order 2" , new Date(), 20L));
+//		orderService.save(new Order(1L, "Order 1" , new Date(), 10L));
+//		orderService.save(new Order(2L, "Order 2" , new Date(), 20L));
 		log.info("Order saved successfully");
 		
 		
