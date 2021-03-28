@@ -18,6 +18,11 @@ public class OrderService {
 	
 	private final OrderRepository orderRepository ;
 	
+	
+	public Order findById (Long id) {
+		return orderRepository.findById(id).orElse(null);
+	}
+	
 	public List<Order> findAll () {
 		return orderRepository.findAll();
 	}

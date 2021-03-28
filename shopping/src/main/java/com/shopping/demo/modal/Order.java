@@ -21,6 +21,8 @@ public class Order {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
 	private Date date ;
 	private Long qty ;
+	
+	private Product product;
 
 	
 }
